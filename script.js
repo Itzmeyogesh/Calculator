@@ -1,17 +1,21 @@
 let input = "";
 
-function appendInput(value) {
+function appendInput(value) 
+{
     input += value;
     updateScreen();
 }
 
-function clearScreen() {
+function clearScreen() 
+{
     input = "";
     updateScreen();
 }
 
-function calculate() {
-    try {
+function calculate() 
+{
+    try 
+    {
         const result = eval(input);
         console.log(result);
         input = input+ " = "+ result.toString();
@@ -24,12 +28,14 @@ function calculate() {
     }
 }
 
-function updateScreen() {
+function updateScreen() 
+{
     const screen = document.getElementById("screen");
     screen.textContent = input; 
 }
 
-function deleteScreen() {
+function deleteScreen() 
+{
     const screen = document.getElementById("screen");
     screen.textContent = input;
     input="";
